@@ -19,7 +19,7 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.png'
+      href: '/web_icon.png'
     }
   ]
 })
