@@ -63,24 +63,24 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 const testimonials = [
   {
     id: 1,
-    quote: "Working with LensCraft was an absolute dream. They captured our wedding day with such artistry and emotion. The photos tell our story in a way words never could.",
-    name: "Sarah Johnson",
-    role: "Bride",
-    avatar: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    quote: "pspspspsps",
+    name: "Da Catto",
+    role: "Pussy",
+    avatar: ""
   },
   {
     id: 2,
-    quote: "The family portraits exceeded our expectations. The photographer has an incredible ability to capture the personality of each family member while creating a cohesive collection.",
-    name: "Michael Reynolds",
-    role: "Family Client",
-    avatar: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    quote:"pspspspsps",
+    name: "Da Catto",
+    role: "Pussy",
+    avatar: ""
   },
   {
     id: 3,
-    quote: "As a brand manager, I needed photography that would elevate our product line. The commercial shots we received were stunning, professional, and perfectly represented our brand aesthetic.",
-    name: "Emma Chen",
-    role: "Marketing Director",
-    avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    quote: "pspspspsps",
+    name: "Da Catto",
+    role: "Pussy",
+    avatar: ""
   }
 ];
 

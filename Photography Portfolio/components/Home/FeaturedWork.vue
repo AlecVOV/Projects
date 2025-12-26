@@ -91,20 +91,19 @@ const featuredWork = [
   },
   {
     id: 2,
-    title: 'Metro Station A Corner',
-    category: 'landscape',
-    image: 'https://res.cloudinary.com/dqved9nx9/image/upload/v1754670226/DSC06534_ywrhp6.jpg'
+    title: 'AWS Food',
+    category: 'documentary',
+    image: 'https://res.cloudinary.com/de3zaxyzj/image/upload/v1766720915/widget-uploads/DSC08090_idshlw.jpg'
   },
   {
     id: 3,
-    title: 'May Gio Coffee',
+    title: 'My Love',
     category: 'portrait',
-    image: 'https://res.cloudinary.com/dqved9nx9/image/upload/v1754670223/20250208_143509_zjkq2c.jpg'
+    image: 'https://res.cloudinary.com/de3zaxyzj/image/upload/v1766721828/widget-uploads/DSC08650_s846hc.jpg'
   }
 ];
 
 const handleHover = (isHovering, index) => {
-  // This function can be used for additional hover effects if needed
-  // Currently, CSS handles the animations via group-hover classes
+  // Additional hover logic can be implemented here if needed 
 };
 </script>

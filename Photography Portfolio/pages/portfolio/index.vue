@@ -55,96 +55,16 @@ const handleFilterChange = (category) => {
 };
 
 const categories = [
-  { id: 1, name: 'Wedding', slug: 'wedding' },
-  { id: 2, name: 'Portrait', slug: 'portrait' },
-  { id: 3, name: 'Landscape', slug: 'landscape' },
-  { id: 4, name: 'Commercial', slug: 'commercial' },
+  { id: 1, name: 'pspspspspsps', slug: 'pspspspspsps' },
 ];
 
 const photos = [
   {
     id: 1,
-    title: 'Eternal Love',
-    category: 'wedding',
+    title: 'psppspspsps',
+    category: 'pspspspspsps',
     image: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'A beautiful moment captured during a garden wedding in springtime.'
-  },
-  {
-    id: 2,
-    title: 'First Dance',
-    category: 'wedding',
-    image: 'https://images.pexels.com/photos/1114425/pexels-photo-1114425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'The magical first dance between newlyweds under a canopy of lights.'
-  },
-  {
-    id: 3,
-    title: 'Wedding Details',
-    category: 'wedding',
-    image: 'https://images.pexels.com/photos/313707/pexels-photo-313707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'The intricate details that make each wedding unique and personal.'
-  },
-  {
-    id: 4,
-    title: 'Urban Portrait',
-    category: 'portrait',
-    image: 'https://images.pexels.com/photos/1689731/pexels-photo-1689731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'Urban portrait session with natural lighting in the city.'
-  },
-  {
-    id: 5,
-    title: 'Creative Self',
-    category: 'portrait',
-    image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'Artistic portrait capturing personality and emotion.'
-  },
-  {
-    id: 6,
-    title: 'Professional Headshot',
-    category: 'portrait',
-    image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'Professional portrait for business and branding purposes.'
-  },
-  {
-    id: 7,
-    title: 'Mountain Majesty',
-    category: 'landscape',
-    image: 'https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'Breathtaking mountain landscape at golden hour.'
-  },
-  {
-    id: 8,
-    title: 'Ocean Sunset',
-    category: 'landscape',
-    image: 'https://images.pexels.com/photos/1553454/pexels-photo-1553454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'Dramatic sunset over the ocean captured with long exposure.'
-  },
-  {
-    id: 9,
-    title: 'Desert Tranquility',
-    category: 'landscape',
-    image: 'https://images.pexels.com/photos/1089298/pexels-photo-1089298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'The stark beauty and minimalist aesthetic of desert landscapes.'
-  },
-  {
-    id: 10,
-    title: 'Product Showcase',
-    category: 'commercial',
-    image: 'https://images.pexels.com/photos/4041188/pexels-photo-4041188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'Professional product photography with careful attention to detail and lighting.'
-  },
-  {
-    id: 11,
-    title: 'Brand Story',
-    category: 'commercial',
-    image: 'https://images.pexels.com/photos/1667071/pexels-photo-1667071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'Lifestyle commercial photography that tells a brand\'s story.'
-  },
-  {
-    id: 12,
-    title: 'Workspace Culture',
-    category: 'commercial',
-    image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'Corporate photography capturing company culture and workplace environment.'
-  },
+    description: 'A pspspspspsps photo.'
+  }
 ];
 </script>
