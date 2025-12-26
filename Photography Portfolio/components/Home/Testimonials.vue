@@ -7,7 +7,7 @@
         :initial="{ opacity: 0, y: 30 }"
         :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 800 } }"
       >
-        Peer Review
+        Client Review
       </h2>
       
       <div class="relative">
