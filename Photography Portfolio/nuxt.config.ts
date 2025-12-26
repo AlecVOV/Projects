@@ -15,7 +15,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       web3formsKey1: process.env.NUXT_PUBLIC_WEB3FORMS_KEY1 || '',
-      web3formsKey2: process.env.NUXT_PUBLIC_WEB3FORMS_KEY2 || ''
+      web3formsKey2: process.env.NUXT_PUBLIC_WEB3FORMS_KEY2 || '',
+      supabaseUrl: process.env.SUPABASE_URL,
+      supabaseKey: process.env.SUPABASE_KEY,
     }
   },
   googleFonts: {
