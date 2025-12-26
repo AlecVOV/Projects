@@ -19,23 +19,41 @@
     
     <section class="section">
       <div class="container-custom">
-        <PortfolioCategoryList 
-          :categories="categories" 
-          :active-category="activeCategory"
-          @filter-change="handleFilterChange"
-        />
-        
-        <PortfolioGrid 
-          :photos="photos" 
-          :category="activeCategory"
-        />
+        <!-- Loading State -->
+        <div v-if="pending" class="text-center py-12">
+          <p class="text-gray-500 dark:text-gray-400">Loading portfolio...</p>
+        </div>
+
+        <!-- Error State -->
+        <div v-else-if="error" class="text-center py-12">
+          <p class="text-red-500">Error loading portfolio: {{ error.message }}</p>
+        </div>
+
+        <!-- Empty State -->
+        <div v-else-if="!portfolioItems || portfolioItems.length === 0" class="text-center py-12">
+          <p class="text-gray-500 dark:text-gray-400">No portfolio items yet. Check back soon!</p>
+        </div>
+
+        <!-- Portfolio Content -->
+        <template v-else>
+          <PortfolioCategoryList 
+            :categories="categories" 
+            :active-category="activeCategory"
+            @filter-change="handleFilterChange"
+          />
+          
+          <PortfolioGrid 
+            :photos="filteredPhotos" 
+            :category="activeCategory"
+          />
+        </template>
       </div>
     </section>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 definePageMeta({
   layout: 'default'
@@ -50,21 +68,45 @@ useHead({
 
 const activeCategory = ref('all');
 
+// Fetch portfolio items from API
+const { data: portfolioItems, pending, error } = await useFetch('/api/portfolio', {
+  // Only get published items for public view
+  transform: (data) => {
+    return data.filter(item => item.status === 'published')
+  }
+})
+
+// Fetch categories from API
+const { data: categoriesData } = await useFetch('/api/categories')
+
+// Transform categories to match the component's expected format
+const categories = computed(() => {
+  if (!categoriesData.value) return []
+  
+  return [
+    { id: 'all', name: 'All', slug: 'all' },
+    ...categoriesData.value.map(cat => ({
+      id: cat.id,
+      name: cat.name,
+      slug: cat.slug
+    }))
+  ]
+})
+
+// Filter photos based on active category
+const filteredPhotos = computed(() => {
+  if (!portfolioItems.value) return []
+  
+  if (activeCategory.value === 'all') {
+    return portfolioItems.value
+  }
+  
+  return portfolioItems.value.filter(item => 
+    item.category_id === activeCategory.value
+  )
+})
+
 const handleFilterChange = (category) => {
   activeCategory.value = category;
 };
-
-const categories = [
-  { id: 1, name: 'pspspspspsps', slug: 'pspspspspsps' },
-];
-
-const photos = [
-  {
-    id: 1,
-    title: 'psppspspsps',
-    category: 'pspspspspsps',
-    image: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'A pspspspspsps photo.'
-  }
-];
 </script>

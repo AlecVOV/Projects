@@ -15,7 +15,7 @@
     "@nuxtjs/supabase": "^2.0.3",
     "@nuxtjs/tailwindcss": "^6.11.0",
     "@supabase/supabase-js": "^2.89.0",
-    "@toast-ui/editor": "^3.2.2",
+    "@toast-ui/editor": "^3.1.0",
     "@vueuse/core": "^10.7.0",
     "@vueuse/motion": "^2.0.0",
     "better-sqlite3": "^12.2.0",
