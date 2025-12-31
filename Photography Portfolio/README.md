@@ -11,6 +11,7 @@ A modern, full-stack photography portfolio website with a powerful CMS (Content 
 ## ✨ Features
 
 ### 🎨 Public Website
+
 - **Responsive Design** - Beautiful UI that works on all devices
 - **Dark Mode Support** - Seamless light/dark theme switching
 - **Portfolio Gallery** - Filterable image gallery with categories
@@ -21,6 +22,7 @@ A modern, full-stack photography portfolio website with a powerful CMS (Content 
 - **SEO Optimized** - Server-side rendering for better search rankings
 
 ### 🛠️ Admin CMS
+
 - **Blog Management** - Create, edit, publish, hide, and delete blog posts
 - **Portfolio Management** - Upload and organize portfolio items by category
 - **Testimonials Management** - Manage client reviews and ratings
@@ -33,6 +35,7 @@ A modern, full-stack photography portfolio website with a powerful CMS (Content 
 ## 🚀 Tech Stack
 
 ### Frontend
+
 - **[Nuxt 3](https://nuxt.com/)** - Vue.js framework with SSR
 - **[Vue 3](https://vuejs.org/)** - Progressive JavaScript framework
 - **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
@@ -40,14 +43,17 @@ A modern, full-stack photography portfolio website with a powerful CMS (Content 
 - **[Marked](https://marked.js.org/)** - Markdown parser
 
 ### Backend & Database
+
 - **[Supabase](https://supabase.com/)** - PostgreSQL database with built-in auth
 - **[Nuxt Supabase](https://supabase.nuxtjs.org/)** - Supabase integration for Nuxt
 
 ### Storage & Deployment
+
 - **[Cloudinary](https://cloudinary.com/)** - Image optimization and CDN
 - **[Vercel](https://vercel.com/)** - Deployment platform (recommended)
 
 ### Additional Tools
+
 - **[Web3Forms](https://web3forms.com/)** - Contact form API
 - **[@nuxtjs/google-fonts](https://google-fonts.nuxtjs.org/)** - Font integration
 - **[@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin)** - Beautiful prose styling
@@ -87,28 +93,32 @@ photography-portfolio/
 ## 🎨 Customization
 
 ### Update Site Information
+
 Edit content in these files:
+
 - index.vue - Homepage content
 - Header.vue - Navigation
 - Footer.vue - Footer content
 - AboutSection.vue - About section
 
-
 ## 📝 Database Schema
 
 ### Tables Overview
+
 - **categories** - Content categories (Wedding, Portrait, etc.)
 - **blog_posts** - Blog articles with markdown content
 - **portfolio_items** - Portfolio images and descriptions
 - **testimonials** - Client reviews and ratings
 
 ### Relationships
+
 - `blog_posts.category_id` → `categories.id`
 - `portfolio_items.category_id` → `categories.id`
 
 ## 🔧 API Routes
 
 ### Blog
+
 - `GET /api/blog` - Get all blog posts
 - `POST /api/blog` - Create blog post
 - `GET /api/blog/:id` - Get single blog post
@@ -116,16 +126,19 @@ Edit content in these files:
 - `DELETE /api/blog/:id` - Delete blog post
 
 ### Portfolio
+
 - `GET /api/portfolio` - Get all portfolio items
 - `POST /api/portfolio` - Create portfolio item
 - `PUT /api/portfolio/:id` - Update portfolio item
 - `DELETE /api/portfolio/:id` - Delete portfolio item
 
 ### Testimonials
+
 - `GET /api/testimonials` - Get all testimonials
 - `POST /api/testimonials` - Create testimonial
 - `PUT /api/testimonials/:id` - Update testimonial
 - `DELETE /api/testimonials/:id` - Delete testimonial
 
 ### Categories
+
 - `GET /api/categories` - Get all categories

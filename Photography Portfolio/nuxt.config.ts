@@ -23,12 +23,16 @@ export default defineNuxtConfig({
     '~/assets/css/animations.css'
   ],
   runtimeConfig: {
+    cloudinaryApiKey: process.env.CLOUDINARY_API_KEY,
+    cloudinaryApiSecret: process.env.CLOUDINARY_API_SECRET,
     supabaseServiceKey: process.env.SUPABASE_SERVICE_KEY,
     public: {
       web3formsKey1: process.env.NUXT_PUBLIC_WEB3FORMS_KEY1 || '',
       web3formsKey2: process.env.NUXT_PUBLIC_WEB3FORMS_KEY2 || '',
       supabaseUrl: process.env.SUPABASE_URL,
       supabaseKey: process.env.SUPABASE_KEY,
+      cloudinaryCloudName: process.env.NUXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+      cloudinaryUploadPreset: process.env.NUXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET
     }
   },
   googleFonts: {
