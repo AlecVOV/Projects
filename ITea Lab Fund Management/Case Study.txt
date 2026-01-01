@@ -1,0 +1,115 @@
+App quản lí quỹ cho ITea Lab
+	Docs:
+	Slide 1: The "Why" - Vấn đề & Chân dung người dùng (User Persona)
+		Chân dung: ITea Lab cần quản lí quỹ (thu, chi) sau khi thông qua việc thành viên đóng quỹ theo năm
+		Vấn đề (Pain Point): 
+			a) Cần một app để quỹ centralize lại cho người giữ quỹ để giữ data thay vì làm sheet thủ công như xưa.
+			b) Thành viên có thể up bill mua đồ lên của các event ITea Lab.
+		Giải pháp (Value Proposition): Một nơi tập trung hóa đơn, minh bạch tiền quỹ thu chi, lưu giữ data chuyển khoản cho các hóa đơn đóng quỹ hoặc mua đồ của các thành viên.
+
+	Slide 2: The "What" - Tính năng & Sự ưu tiên (Prioritization)
+		Must Have (MVP - Phiên bản 1):
+			Thêm, xóa thành viên (các thông tin của thành viên)
+			Thêm hóa đơn cho mỗi lần mua đồ ở một cái event nào đó.
+			Báo cáo thu chi bằng dashboard 
+			Thêm ảnh chuyển khoản để chủ quỹ check và cập nhật danh sách thành viên đóng quỹ
+			Nhắc nợ qua thông báo đẩy (Notification) trong tài khoản của thành viên, và gửi mail khi admin nhập trên web.
+
+		Should Have (Phiên bản 2):
+			Xuất ra file PDF hoặc Excel 
+			Comment ngay trong từng bill
+
+		Out of scope (không làm):
+			Không làm: Phiên bản Mobile App
+			Không làm: Tính năng chat nhóm (Đã có Zalo/Messenger lo, app chỉ tập trung vào tiền).
+			Không làm: Tính năng đầu tư sinh lời (Sai mục đích của app quản lý chi tiêu nhóm).
+
+
+	Slide 3: The "How" - User Journey Map (Hành trình người dùng)
+		Step 1: Set up
+			Senarios: ITea Lab cần một nơi để tập trung hóa luồng tiền quỹ của các thành viên cho việc thu chi nó công khai minh bạch và rõ ràng
+			Action: 
+				1) Admin web sẽ add mail của Quỹ để có quyền tạo nhóm quỹ và quản lí thu chi
+				2) Quỹ add thành viên thông qua email họ đăng kí trên web vào một section là Lab Finance Management.
+			Result: Mọi người đều access được dashboard chung của lab và các mục cá nhân (hóa đơn event, bill thanh toán quỹ của năm)
+
+		Step 2: Capture - The Core Action
+			Senarios: Khi lab có một event phải tham gia với trường, trích từ quỹ lab ra mua đồ và thành viên có ứng tiền ra trước 
+			Action:
+				1) Quỹ lab tạo khoản chi cho event -> mọi người có thể vào xem và up bill lên ở phần đó
+				2) Head lab thanh toán -> chụp bill lại -> up lên phần khoản chi cho event đó 
+			System Processing: sau khi quỹ lab duyệt sẽ trừ vào số dư tổng của quỹ
+
+			Senarios: mọi người cần đóng tiền quỹ vào tài khoản cá nhân của quỹ 
+			Action:
+				1) Quỹ lab đưa qr của mình vào trong phần đóng quỹ chung (QR mb bank - sao kê rõ ràng) -> Quỹ sẽ click 1 nút "ĐÒI TIỀN" -> Tất cả email về nhắc đóng quỹ lab sẽ gửi về cho mail của thành viên và hiện thông báo vào tài khoản cá nhân của các bạn.
+				2) Các thành viên có thể chuyển khoản -> Up hóa đơn vào mục đóng quỹ cá nhân theo năm
+			System Processing: sau khi quỹ lab duyệt và kiểm tra, sẽ cập nhật số dư tổng (nhập tay) vào quỹ chung
+
+		Step 3: Transparency
+			Senarios: thành viên thắc mắc là cái thu chi rõ ràng không? có khai khống bill gì không? hay có ai điểm thủ quỹ không? mình có đóng quỹ chưa?
+			Action: thành viên có thể xem có bao nhiêu cái bill cho event đó
+			Result: cập nhật được minh bạch hóa đơn theo event để thành viên không lo => vì các hóa đơn chình ình trên các mục event quỹ
+
+		Step 4: Settlement - The Value
+			Senarios: sau mỗi kỳ thì phải tổng hợp tài chính cho HQ
+			Action: Quỹ chỉ cần vào xem các mục event đã tạo, tổng hợp thu chi qua ảnh, note lại làm báo cáo cho bên trường rõ ràng hơn, đỡ nhắn nhau tùm lum rồi mất bill các kiểu
+			Result: Nhanh gọn lẹ, đỡ phiền, tiện
+
+
+	Emotional Curve: 
+	Before using App: 😟 Lo lắng, Rối rắm (Vì sợ tính sai tiền).
+	Entering Bill: 😐 Bình thường (Thao tác nhanh).
+	Observing Report: 😌 An tâm (Vì mọi thứ minh bạch).
+	After using App: 😄 Hạnh phúc, Thỏa mãn (Vì không ai bị thiệt, tình bạn bền lâu).
+
+
+	Slide 4: The "Secret Sauce" - Logic nghiệp vụ (The Reimbursement Lifecycle)
+		Vì Lab hoạt động theo cơ chế: Thành viên mua đồ -> Up bill -> Admin duyệt -> Admin trả tiền lại cho thành viên. Logic "ăn tiền" ở đây là quản lý trạng thái (State Machine) để đảm bảo không ai được nhận tiền 2 lần và không bill nào bị bỏ sót.
+			*) Vấn đề: Làm sao đảm bảo bill up lên là thật? Làm sao biết bill nào Admin đã trả tiền lại cho mem rồi, bill nào chưa?
+			*) Giải pháp (Logic): Hệ thống quản lý trạng thái đơn 3 bước (3-Step Verification Logic).
+
+		Modelize:
+			State 1: PENDING (Chờ duyệt)
+				Trigger: Thành viên up ảnh hóa đơn mua bánh kẹo 500k.
+				Logic: Số tiền này được ghi nhận là "Nợ tạm tính". Tổng quỹ hiển thị chưa bị trừ, nhưng Dashboard hiện cảnh báo "Có khoản chi đang chờ".
+
+			State 2: VERIFIED (Đã xác thực)
+				Trigger: Admin (Thủ quỹ) kiểm tra ảnh hóa đơn hợp lệ -> Bấm nút "Approve".
+				Logic: Hệ thống xác nhận bill hợp lệ. Số tiền 500k chính thức được tính vào chi phí Event.
+
+			State 3: REIMBURSED (Đã hoàn tiền)
+				Trigger: Thủ quỹ chuyển khoản trả 500k cho thành viên -> Bấm nút "Mark as Paid".
+				Logic: Hệ thống khóa bill này lại (không sửa xóa được nữa). Gửi mail xác nhận cho thành viên: "Bạn đã được hoàn tiền".
+
+		=> Điểm ăn tiền (Secret Sauce): Tính năng "Audit Log" (Vết kiểm toán). Bất kỳ thay đổi trạng thái nào cũng lưu lại: Admin A đã duyệt bill của Mem B vào lúc 10:00 AM. Đảm bảo minh bạch tuyệt đối với nhà trường/HQ.
+
+		Đối với Slide 4 (Logic):
+		Bạn vẽ một cái sơ đồ ngang đơn giản:
+		[Upload Bill] ===Member===> [PENDING] ===Admin Check===> [VERIFIED] ===Admin Transfer===> [SETTLED]
+		(Dùng màu sắc: Vàng -> Xanh dương -> Xanh lá để thể hiện trạng thái).
+
+	Slide 5: Success Metrics 
+		1. Report Generation Time (Thời gian làm báo cáo)
+			- Metric: Giảm thời gian tổng hợp báo cáo cuối kỳ cho HQ.
+			- Before: Mất 3-4 ngày (để lục lại tin nhắn Zalo, gom bill giấy, nhập Excel).
+			- After: < 5 phút (Bấm nút "Export Report" trên Dashboard là xong).
+			- Goal: Giảm 95% thời gian lãng phí vào việc admin.
+
+		2. Bill Loss Rate (Tỷ lệ mất hóa đơn)
+			- Metric: Số lượng hóa đơn bị thất lạc/không đối chiếu được.
+			- Before: Thường xuyên mất bill nhỏ lẻ, dẫn đến thâm hụt quỹ không rõ nguyên nhân.
+			- After: 0% (Vì bill được số hóa và upload ngay tại thời điểm mua hàng).
+			- Goal: Zero Data Loss (Không mất dữ liệu tài chính).
+
+		3. Collection Speed (Tốc độ đóng quỹ)
+			- Metric: Thời gian trung bình để thu đủ 100% quỹ thành viên đầu năm.
+			- Before: 1 tháng (Phải đi nhắc từng người, trôi tin nhắn).
+			- After: 1 tuần (Nhờ hệ thống Notification nhắc nợ tự động và Dashboard bêu tên ai chưa đóng).
+			- Goal: Tăng tốc độ thu hồi vốn (Capital turnover) lên 400%.
+
+
+	Đối với Slide 5 (Metrics): Chia làm 3 cột to, mỗi cột để một con số thật lớn:
+	- 95% Time Saved (Tiết kiệm thời gian báo cáo).
+	- 0% Missing Bills (Không mất hóa đơn).
+	- 100% Transparency (Minh bạch tuyệt đối).

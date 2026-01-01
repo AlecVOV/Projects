@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "5adcdffde90351a4",
+    "type": "split",
+    "children": [
+      {
+        "id": "266057dd4f088230",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bdb28f77a643c6f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tech_Stack.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Tech_Stack"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7ffecccface6d545",
+    "type": "split",
+    "children": [
+      {
+        "id": "f63f40a25b644660",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4bf97363ca959304",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "bc917a1b8e4aa1f8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "754db955bb9cce13",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a5606b9f5cbf1724",
+    "type": "split",
+    "children": [
+      {
+        "id": "87cf213e846588f8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bde69db43c2bb557",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Tech_Stack.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Tech_Stack"
+            }
+          },
+          {
+            "id": "369b09b9b3a30a8a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Tech_Stack.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Tech_Stack"
+            }
+          },
+          {
+            "id": "d36444e2627dc7dd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "cbc737537173a5da",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "008731b4711016f8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Tech_Stack.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Tech_Stack"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "bdb28f77a643c6f7",
+  "lastOpenFiles": [
+    "itealab-fund-manager/node_modules/@babel/types/README.md",
+    "itealab-fund-manager/node_modules/@babel/traverse/README.md",
+    "itealab-fund-manager/node_modules/@babel/traverse/LICENSE",
+    "itealab-fund-manager/node_modules/@babel/plugin-transform-typescript/README.md",
+    "itealab-fund-manager/node_modules/@babel/plugin-transform-typescript/LICENSE",
+    "itealab-fund-manager/node_modules/@babel/helper-module-imports/README.md",
+    "itealab-fund-manager/node_modules/@babel/helper-module-imports/LICENSE",
+    "itealab-fund-manager/node_modules/@babel/helper-module-transforms/README.md",
+    "itealab-fund-manager/node_modules/@babel/helper-module-transforms/LICENSE",
+    "itealab-fund-manager/node_modules/@babel/helper-compilation-targets/node_modules/semver/bin/semver.js",
+    "itealab-fund-manager/node_modules/@babel/helper-compilation-targets/node_modules/semver/bin",
+    "itealab-fund-manager/node_modules/@babel/helper-compilation-targets/node_modules/semver/LICENSE",
+    "itealab-fund-manager/node_modules/@babel/helper-compilation-targets/node_modules/semver/range.bnf",
+    "itealab-fund-manager/node_modules/@babel/helper-compilation-targets/README.md",
+    "itealab-fund-manager/node_modules/@babel/helper-compilation-targets/LICENSE",
+    "itealab-fund-manager/node_modules/@babel/helper-optimise-call-expression/README.md",
+    "itealab-fund-manager/node_modules/@babel/helper-optimise-call-expression/lib/index.js.map",
+    "itealab-fund-manager/node_modules/@babel/helper-member-expression-to-functions/README.md",
+    "itealab-fund-manager/node_modules/@babel/helper-string-parser/README.md",
+    "itealab-fund-manager/node_modules/@oxc-parser/binding-win32-x64-msvc/README.md",
+    "itealab-fund-manager/node_modules/anymatch/README.md",
+    "itealab-fund-manager/node_modules/diff/README.md",
+    "itealab-fund-manager/node_modules/diff/CONTRIBUTING.md",
+    "itealab-fund-manager/node_modules/buffer-from/readme.md",
+    "itealab-fund-manager/node_modules/ansi-regex/readme.md",
+    "itealab-fund-manager/node_modules/is-stream/readme.md",
+    "itealab-fund-manager/node_modules/vite-hot-client/README.md",
+    "itealab-fund-manager/node_modules/caniuse-api/README.md",
+    "itealab-fund-manager/node_modules/caniuse-api/CHANGELOG.md",
+    "itealab-fund-manager/node_modules/@oxc-transform/binding-win32-x64-msvc/README.md",
+    "itealab-fund-manager/node_modules/ms/readme.md",
+    "itealab-fund-manager/node_modules/ms/license.md",
+    "itealab-fund-manager/node_modules/@poppinss/exception/LICENSE.md",
+    "itealab-fund-manager/node_modules/crc-32/README.md",
+    "itealab-fund-manager/node_modules/cross-spawn/node_modules/isexe/README.md",
+    "itealab-fund-manager/node_modules/async-sema/license.md",
+    "itealab-fund-manager/node_modules/prisma/build/public/assets/tick.8cbb6a93.svg",
+    "itealab-fund-manager/node_modules/prisma/build/public/assets/settings.5ad25af2.svg",
+    "itealab-fund-manager/node_modules/prisma/build/public/assets/tick-indeterminate.aec8a44d.svg",
+    "itealab-fund-manager/node_modules/prisma/build/public/assets/play.8811691e.svg",
+    "itealab-fund-manager/node_modules/prisma/build/public/assets/sun.89774753.svg",
+    "itealab-fund-manager/node_modules/prisma/build/public/assets/string.ea615a24.svg",
+    "itealab-fund-manager/node_modules/prisma/build/public/assets/refresh.d5448ccc.svg",
+    "itealab-fund-manager/node_modules/prisma/build/public/assets/search.2ed766ce.svg",
+    "itealab-fund-manager/node_modules/prisma/build/public/assets/plus.8fbf7ad3.svg",
+    "itealab-fund-manager/node_modules/prisma/build/public/assets/panel-left.a81e4b97.svg"
+  ]
+}
