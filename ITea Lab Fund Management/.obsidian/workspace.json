@@ -35,25 +35,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4bf97363ca959304",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
-            }
-          },
-          {
             "id": "bc917a1b8e4aa1f8",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:itealab-fund-manager/node_modules  ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -183,7 +170,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "bdb28f77a643c6f7",
+  "active": "bc917a1b8e4aa1f8",
   "lastOpenFiles": [
     "itealab-fund-manager/node_modules/@babel/types/README.md",
     "itealab-fund-manager/node_modules/@babel/traverse/README.md",

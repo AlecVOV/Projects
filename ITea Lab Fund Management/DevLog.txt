@@ -1,0 +1,16 @@
+DevLog:
+
+Day 1 (02/01):
+Tạo được trang login từ đầu => Vô admin
+Tạo được 1 trang dashboard (chức năng này của quỹ quản lí)
+Tạo được 1 trang campaign (chức năng này của quỹ quản lí)
+Tạo được 1 trang để xem chuyển khoản (chức năng này của quỹ quản lí)
+	
+	=> Thiếu: 
+		- 1 trang admin assign xem ai là quỹ quản lí, group họ vào một nhóm, xem danh sách tổng của những thành viên đã sign in bằng email (google)
+		- Loading page (frame animation)
+		- Thanh nav, Footer.
+	Màu sắc: xanh lá, matcha, tone chủ đạo vẫn là xanh lá
+
+
+Day 2:
